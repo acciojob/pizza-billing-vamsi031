@@ -15,7 +15,9 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
-        this.price=300;
+        if(isVeg){
+            this.price=300;
+        }else this.price=400;
 
     }
 
@@ -36,19 +38,19 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        this.extracheese+=80;
+        this.extracheese=80;
 
     }
 
     public void addExtraToppings(){
         // your code goes here
-        if(this.isVeg)this.extraToppings+=70;
-        else this.extraToppings+=120;
+        if(this.isVeg)this.extraToppings=70;
+        else this.extraToppings=120;
     }
 
     public void addTakeaway(){
         // your code goes here
-        this.bagPrice+=20;
+        this.bagPrice=20;
     }
 
     public String getBill(){
@@ -60,4 +62,16 @@ public class Pizza {
                 "\n"+"Total Price:"+(this.price+this.extracheese+this.extraToppings+this.bagPrice)+"\n";
 
     }
+
+//    @Override
+//    public String toString() {
+//        return "Pizza{" +
+//                "price=" + price +
+//                ", isVeg=" + isVeg +
+//                ", bill='" + bill + '\'' +
+//                ", extracheese=" + extracheese +
+//                ", extraToppings=" + extraToppings +
+//                ", bagPrice=" + bagPrice +
+//                '}';
+//    }
 }
