@@ -5,6 +5,9 @@ public class DeluxePizza extends Pizza {
 
         // your code goes here
         super(isVeg);
+        super.setExtracheese(80);
+        if(isVeg)super.setExtraToppings(70);
+        else super.setExtraToppings(120);
 
     }
 }
